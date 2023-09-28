@@ -15,7 +15,10 @@ public class FuelCosts
         String trash = "";
 
 
-        // cost per 100 miles would be how many gals of gas per mile * 100, that amount * cost of gallon of gas
+        // cost per 100 miles would be the cost per one mile * 100
+        // milesPerGal = miles per gallon of gas
+        // cost per gallon / miles per gallon * 100
+        // (gasPerGal / milesPerGal) * 100
         // how far the car can go with the gas in the tank = milesPerGal * gallons
 
         do
@@ -75,7 +78,7 @@ public class FuelCosts
 
         }while(!gasPerGalDone);
 
-        costPer100 = (milesPerGal * 100) * gasPerGal;
+        costPer100 = (gasPerGal / milesPerGal) * 100;
         System.out.println("It would cost " + costPer100 + " to travel 100 miles.");
 
         howFar = milesPerGal * gallons;
